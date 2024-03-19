@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Python_SSD/py51onl/sql_les1_task.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="250"/><column_width id="3" width="4907"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,6:mainCINEMA"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="CINEMA" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="101"/><column index="2" value="142"/><column index="3" value="186"/><column index="4" value="101"/><column index="5" value="300"/><column index="6" value="169"/><column index="7" value="244"/><column index="8" value="278"/><column index="9" value="162"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">--INSERT INTO CINEMA (NAME, SURNAME, AGE, MOVIE_NAME, BUDGET, MANAGER, RELEASE_YEAR, SEX)
+--VALUES
+--(&quot;Ian&quot;, &quot;McKellen&quot;, 84, &quot;The Lord of the Rings&quot;, 13000000, &quot;Peter Jackson&quot;, 2001, &quot;male&quot;),
+--(&quot;Daniel&quot;, &quot;Radcliffe&quot;, 34, &quot;Harry Potter&quot;, 14000000, &quot;Chris Columbus&quot;, 2001, &quot;male&quot;),
+--(&quot;Leonardo&quot;, &quot;DiCaprio&quot;, 49, &quot;The Wolf Wall Street&quot;, 25000000, &quot;Martin Scorsese&quot;, 2013, &quot;male&quot;),
+--(&quot;Sandra&quot;, &quot;Bullock&quot;, 59, &quot;Bird Box&quot;, 17500000, &quot;Susanne Bier&quot;, 2018, &quot;female&quot;),
+--(&quot;Robert&quot;, &quot;Downey Jr.&quot;, 58, &quot;Iron Man&quot;, 5000000, &quot;Jon Favreau&quot;, 2008, &quot;male&quot;),
+--(&quot;Daniel&quot;, &quot;Craig&quot;, 56, &quot;Glass Onion: A Knives Out Mystery&quot;, 50000000, &quot;Rian Johnson&quot;, 2022, &quot;male&quot;),
+--(&quot;Scarlett&quot;, &quot;Johansson&quot;, 39, &quot;Black Widow&quot;, 20000000, &quot;Cate Shortland&quot;, 2021, &quot;female&quot;),
+--(&quot;Bradley&quot;, &quot;Cooper&quot;, 49, &quot;A Star Is Born&quot;, 50000000, &quot;Bradley Cooper&quot;, 2018, &quot;male&quot;),
+--(&quot;Lady&quot;, &quot;Gaga&quot;, 37, &quot;House of Gucci&quot;, 50000000, &quot;Ridley Scott&quot;, 2021, &quot;female&quot;),
+--(&quot;Kevin&quot;, &quot;Hart&quot;, 44, &quot;Jumanji: Welcome to the Jungle&quot;, 10000000, &quot;Jake Kasdan&quot;, 2017, &quot;male&quot;),
+--(&quot;Jennifer&quot;, &quot;Lawrence&quot;, 33, &quot;The Hunger Games&quot;, 20000000, &quot;Gary Ross&quot;, 2012, &quot;female&quot;),
+--(&quot;Channing&quot;, &quot;Tatum&quot;, 43, &quot;The Lost City&quot;, 10000000, &quot;Aaron Nee&quot;, 2022, &quot;male&quot;),
+--(&quot;Zendaya&quot;, &quot;Coleman&quot;, 25, &quot;Dune&quot;, 200000000, &quot;Denis Villeneuve&quot;, 2021, &quot;female&quot;),
+--(&quot;Emma&quot;, &quot;Watson&quot;, 33, &quot;Harry Potter&quot;, 14000000, &quot;Chris Columbus&quot;, 2001, &quot;female&quot;),
+--(&quot;Tom&quot;, &quot;Holland&quot;, 26, &quot;Spider-Man: Homecoming&quot;, 17500000, &quot;Jon Watts&quot;, 2017, &quot;male&quot;),
+--(&quot;Gal&quot;, &quot;Gadot&quot;, 38, &quot;Wonder Woman&quot;, 14900000, &quot;Patty Jenkins&quot;, 2017, &quot;female&quot;),
+--(&quot;Amandla&quot;, &quot;Stenberg&quot;, 24, &quot;The Hunger Games&quot;, 20000000, &quot;Gary Ross&quot;, 2012, &quot;non-binary&quot;);
+--ALTER TABLE CINEMA
+--ADD COLUMN fee_REAL INT;
+/*
+UPDATE CINEMA
+SET fee_REAL = 5000000
+WHERE NAME = 'Ian' AND SURNAME = 'McKellen';
+UPDATE CINEMA
+SET fee_REAL = 5500000
+WHERE NAME = 'Daniel' AND SURNAME = 'Radcliffe';
+UPDATE CINEMA
+SET fee_REAL = 3550500
+WHERE NAME = 'Leonardo' AND SURNAME = 'DiCaprio';
+UPDATE CINEMA
+SET fee_REAL = 5600000
+WHERE NAME = 'Sandra' AND SURNAME = 'Bullock';
+UPDATE CINEMA
+SET fee_REAL = 34000000
+WHERE NAME = 'Robert' AND SURNAME = 'Downey Jr.';
+UPDATE CINEMA
+SET fee_REAL = 5600000
+WHERE NAME = 'Daniel' AND SURNAME = 'Craig';
+UPDATE CINEMA
+SET fee_REAL = 10000000
+WHERE NAME = 'Scarlett' AND SURNAME = 'Johansson';
+UPDATE CINEMA
+SET fee_REAL = 15000000
+WHERE NAME = 'Bradley' AND SURNAME = 'Cooper';
+UPDATE CINEMA
+SET fee_REAL = 15000000
+WHERE NAME = 'Lady' AND SURNAME = 'Gaga';
+UPDATE CINEMA
+SET fee_REAL = 7000000
+WHERE NAME = 'Kevin' AND SURNAME = 'Hart';
+UPDATE CINEMA
+SET fee_REAL = 15000000
+WHERE NAME = 'Jennifer' AND SURNAME = 'Lawrence';
+UPDATE CINEMA
+SET fee_REAL = 5600000
+WHERE NAME = 'Channing' AND SURNAME = 'Tatum';
+UPDATE CINEMA
+SET fee_REAL = 22000000
+WHERE NAME = 'Zendaya' AND SURNAME = 'Coleman';
+UPDATE CINEMA
+SET fee_REAL = 6700000
+WHERE NAME = 'Emma' AND SURNAME = 'Watson';
+UPDATE CINEMA
+SET fee_REAL = 1600000
+WHERE NAME = 'Tom' AND SURNAME = 'Holland';
+UPDATE CINEMA
+SET fee_REAL = 5000000
+WHERE NAME = 'Gal' AND SURNAME = 'Gadot';
+UPDATE CINEMA
+SET fee_REAL = 15300000
+WHERE NAME = 'Amandla' AND SURNAME = 'Stenberg';
+*/
+--ALTER TABLE CINEMA
+--ADD COLUMN city
+/*
+UPDATE CINEMA
+SET city = &quot;Los Angeles&quot;
+WHERE NAME = &quot;Ian&quot; AND SURNAME = &quot;McKellen&quot;;
+UPDATE CINEMA
+SET city = 'London'
+WHERE NAME = 'Daniel' AND SURNAME = 'Radcliffe';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Leonardo' AND SURNAME = 'DiCaprio';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Sandra' AND SURNAME = 'Bullock';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Robert' AND SURNAME = 'Downey Jr.';
+UPDATE CINEMA
+SET city = 'London'
+WHERE NAME = 'Daniel' AND SURNAME = 'Craig';
+UPDATE CINEMA
+SET city = 'New York'
+WHERE NAME = 'Scarlett' AND SURNAME = 'Johansson';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Bradley' AND SURNAME = 'Cooper';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Lady' AND SURNAME = 'Gaga';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Kevin' AND SURNAME = 'Hart';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Jennifer' AND SURNAME = 'Lawrence';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Channing' AND SURNAME = 'Tatum';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Zendaya' AND SURNAME = 'Coleman';
+UPDATE CINEMA
+SET city = 'London'
+WHERE NAME = 'Emma' AND SURNAME = 'Watson';
+UPDATE CINEMA
+SET city = 'London'
+WHERE NAME = 'Tom' AND SURNAME = 'Holland';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Gal' AND SURNAME = 'Gadot';
+UPDATE CINEMA
+SET city = 'Los Angeles'
+WHERE NAME = 'Amandla' AND SURNAME = 'Stenberg';
+*/
+--SELECT DISTINCT NAME, SURNAME
+--FROM CINEMA
+--WHERE RELEASE_YEAR BETWEEN 1990 AND 2010;
+/*
+SELECT MOVIE_NAME
+FROM CINEMA
+GROUP BY MOVIE_NAME
+HAVING COUNT(*) &gt;= 2
+ORDER BY SURNAME ASC;
+*/
+--SELECT COUNT(*) AS male_actors_over_55
+--FROM CINEMA
+--WHERE SEX = &quot;male&quot; AND AGE &gt; 55;
+/*
+SELECT NAME, SURNAME
+FROM CINEMA
+WHERE BUDGET &gt; 1000000
+*/
+--SELECT SUM(fee_REAL) AS total_actor_fees
+--FROM CINEMA
+--WHERE RELEASE_YEAR BETWEEN 1995 AND 2005;
+/*
+SELECT MOVIE_NAME, NAME, SURNAME
+FROM CINEMA
+WHERE RELEASE_YEAR - AGE &lt; 35;
+*/
+--SELECT MOVIE_NAME
+--FROM CINEMA
+--WHERE MOVIE_NAME LIKE '% %';
+/*
+SELECT MOVIE_NAME, SUM(fee_REAL) AS total_actor_fees
+FROM CINEMA
+GROUP BY MOVIE_NAME
+ORDER BY total_actor_fees DESC
+LIMIT 5;
+*/
+--SELECT MOVIE_NAME
+--FROM CINEMA
+--GROUP BY MOVIE_NAME
+--ORDER BY COUNT(*) DESC
+--LIMIT 1;</sql><current_tab id="0"/></tab_sql></sqlb_project>
